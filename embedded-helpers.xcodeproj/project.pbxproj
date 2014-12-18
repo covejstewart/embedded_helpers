@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C43693C1A3F53C2004E477A /* compact_logs_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C43693A1A3F53C2004E477A /* compact_logs_test.c */; };
 		6CDABA581A380C34001E2AB2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CDABA571A380C34001E2AB2 /* main.c */; };
+		6CDABA631A380D18001E2AB2 /* block.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CDABA611A380D18001E2AB2 /* block.c */; };
+		6CDABA661A3A0A72001E2AB2 /* compact_logs.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CDABA641A3A0A72001E2AB2 /* compact_logs.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6C43693A1A3F53C2004E477A /* compact_logs_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compact_logs_test.c; path = compact_logs/compact_logs_test.c; sourceTree = "<group>"; };
+		6C43693B1A3F53C2004E477A /* compact_logs_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compact_logs_test.h; path = compact_logs/compact_logs_test.h; sourceTree = "<group>"; };
 		6CDABA541A380C34001E2AB2 /* embedded-helpers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "embedded-helpers"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDABA571A380C34001E2AB2 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		6CDABA611A380D18001E2AB2 /* block.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = block.c; path = src/block.c; sourceTree = "<group>"; };
+		6CDABA621A380D18001E2AB2 /* block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = block.h; path = src/block.h; sourceTree = "<group>"; };
+		6CDABA641A3A0A72001E2AB2 /* compact_logs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compact_logs.c; path = compact_logs/compact_logs.c; sourceTree = "<group>"; };
+		6CDABA651A3A0A72001E2AB2 /* compact_logs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compact_logs.h; path = compact_logs/compact_logs.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				6CDABA571A380C34001E2AB2 /* main.c */,
+				6C43693A1A3F53C2004E477A /* compact_logs_test.c */,
+				6C43693B1A3F53C2004E477A /* compact_logs_test.h */,
+				6CDABA611A380D18001E2AB2 /* block.c */,
+				6CDABA621A380D18001E2AB2 /* block.h */,
+				6CDABA641A3A0A72001E2AB2 /* compact_logs.c */,
+				6CDABA651A3A0A72001E2AB2 /* compact_logs.h */,
 			);
 			path = "embedded-helpers";
 			sourceTree = "<group>";
@@ -118,7 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CDABA631A380D18001E2AB2 /* block.c in Sources */,
 				6CDABA581A380C34001E2AB2 /* main.c in Sources */,
+				6C43693C1A3F53C2004E477A /* compact_logs_test.c in Sources */,
+				6CDABA661A3A0A72001E2AB2 /* compact_logs.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +250,7 @@
 				6CDABA5D1A380C34001E2AB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
