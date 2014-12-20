@@ -23,7 +23,7 @@ if(false == (X)) { \
 } while(0)
 
 
-static void free_space_after_write(void)
+static void test_free_space_after_write(void)
 {
     
     log_init();
@@ -42,7 +42,7 @@ static void free_space_after_write(void)
     
 }
 
-static void fill_queue_and_overflow(void)
+static void test_fill_queue_and_overflow(void)
 {
     log_init();
     
@@ -58,7 +58,7 @@ static void fill_queue_and_overflow(void)
     ASSERT(true  == log_is_full());
 }
 
-static void check_for_underflow(void)
+static void test_check_for_underflow(void)
 {
     log_init();
     
@@ -69,15 +69,63 @@ static void check_for_underflow(void)
     ASSERT(true  == log_is_empty());
 }
 
+static void test_incrementing_timestamp(void)
+{
+    log_init();
+    
+    log_t log;
+    
+    log_write(&log);
+    log_read (&log);
+    
+    ASSERT(0 == log.tick);
+    
+    log_increment_time();
+    
+    log_write(&log);
+    log_read (&log);
+    
+    ASSERT(1 == log.tick);
+    
+}
+
+static void test_incrementing_order(void)
+{
+    log_init();
+    
+    log_t log;
+    
+    log_write(&log);
+    log_read (&log);
+    
+    ASSERT(0 == log.order);
+    
+    log_write(&log);
+    log_read (&log);
+    
+    ASSERT(1 == log.order);
+    
+    log_increment_time();
+    
+    log_write(&log);
+    log_read (&log);
+    
+    ASSERT(0 == log.order);
+
+}
+
 uint32_t compact_logs_test(void) {
     
     m_failures = 0;
     
     printf("Running - %s\n", __func__);
     
-    free_space_after_write();
-    fill_queue_and_overflow();
-    check_for_underflow();
+    test_free_space_after_write();
+    test_fill_queue_and_overflow();
+    test_check_for_underflow();
+    test_incrementing_timestamp();
+    test_incrementing_order();
     
+
     return m_failures;
 }

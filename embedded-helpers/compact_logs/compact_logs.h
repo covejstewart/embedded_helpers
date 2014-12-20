@@ -26,18 +26,20 @@ typedef enum {
 typedef struct log_struct {
     log_state   state;
     uint32_t    tick;
-    uint32_t    offset;
+    uint8_t     order;
     uint8_t     type;
     uint8_t     data[LOG_DATA_LENGTH];
 } log_t;
 
 
-void     log_init (void);
-void     log_clear(void);
-bool     log_write(log_t *log);
-bool     log_read (log_t *log);
+void  log_init    (void);
+void  log_clear   (void);
+bool  log_write   (log_t *log);
+bool  log_read    (log_t *log);
 
-bool     log_is_full(void);
-bool     log_is_empty(void);
+bool  log_is_full (void);
+bool  log_is_empty(void);
+
+void  log_increment_time(void);
 
 #endif /* defined(__embedded_helpers__compact_logs__) */
