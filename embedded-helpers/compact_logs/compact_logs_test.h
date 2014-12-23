@@ -10,6 +10,7 @@
 #define __embedded_helpers__compact_logs_test__
 
 #include <stdio.h>
+#include "test.h"
 
 uint32_t compact_logs_test(void);
 

@@ -9,18 +9,7 @@
 #include "compact_logs_test.h"
 #include "compact_logs.h"
 
-#define FAILURE 1
-#define SUCCESS 0
-
 static uint32_t m_failures;
-
-#define ASSERT(X) \
-do { \
-if(false == (X)) { \
-    m_failures++; \
-    printf("Test Failure in %s at %d\n",__func__,__LINE__); \
-}\
-} while(0)
 
 
 static void test_free_space_after_write(void)

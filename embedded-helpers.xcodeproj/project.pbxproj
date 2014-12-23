@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6C43693C1A3F53C2004E477A /* compact_logs_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C43693A1A3F53C2004E477A /* compact_logs_test.c */; };
+		6C87B5941A495865009C68FF /* timer_service.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C87B5921A495865009C68FF /* timer_service.c */; };
+		6C87B5971A4958D3009C68FF /* timer_service_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C87B5951A4958D3009C68FF /* timer_service_test.c */; };
 		6CDABA581A380C34001E2AB2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CDABA571A380C34001E2AB2 /* main.c */; };
 		6CDABA661A3A0A72001E2AB2 /* compact_logs.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CDABA641A3A0A72001E2AB2 /* compact_logs.c */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,11 @@
 /* Begin PBXFileReference section */
 		6C43693A1A3F53C2004E477A /* compact_logs_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compact_logs_test.c; path = compact_logs/compact_logs_test.c; sourceTree = "<group>"; };
 		6C43693B1A3F53C2004E477A /* compact_logs_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compact_logs_test.h; path = compact_logs/compact_logs_test.h; sourceTree = "<group>"; };
+		6C87B5921A495865009C68FF /* timer_service.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = timer_service.c; path = timer_service/timer_service.c; sourceTree = "<group>"; };
+		6C87B5931A495865009C68FF /* timer_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timer_service.h; path = timer_service/timer_service.h; sourceTree = "<group>"; };
+		6C87B5951A4958D3009C68FF /* timer_service_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = timer_service_test.c; path = timer_service/timer_service_test.c; sourceTree = "<group>"; };
+		6C87B5961A4958D3009C68FF /* timer_service_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timer_service_test.h; path = timer_service/timer_service_test.h; sourceTree = "<group>"; };
+		6C87B5981A495A8E009C68FF /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
 		6CDABA541A380C34001E2AB2 /* embedded-helpers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "embedded-helpers"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDABA571A380C34001E2AB2 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		6CDABA641A3A0A72001E2AB2 /* compact_logs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compact_logs.c; path = compact_logs/compact_logs.c; sourceTree = "<group>"; };
@@ -44,6 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C87B5911A49583B009C68FF /* timer_service */ = {
+			isa = PBXGroup;
+			children = (
+				6C87B5921A495865009C68FF /* timer_service.c */,
+				6C87B5931A495865009C68FF /* timer_service.h */,
+				6C87B5951A4958D3009C68FF /* timer_service_test.c */,
+				6C87B5961A4958D3009C68FF /* timer_service_test.h */,
+			);
+			name = timer_service;
+			sourceTree = "<group>";
+		};
 		6C9564081A464695008E9FB6 /* compact_logs */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,8 +92,10 @@
 		6CDABA561A380C34001E2AB2 /* embedded-helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6C87B5911A49583B009C68FF /* timer_service */,
 				6C9564081A464695008E9FB6 /* compact_logs */,
 				6CDABA571A380C34001E2AB2 /* main.c */,
+				6C87B5981A495A8E009C68FF /* test.h */,
 			);
 			path = "embedded-helpers";
 			sourceTree = "<group>";
@@ -137,8 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CDABA581A380C34001E2AB2 /* main.c in Sources */,
+				6C87B5941A495865009C68FF /* timer_service.c in Sources */,
 				6C43693C1A3F53C2004E477A /* compact_logs_test.c in Sources */,
 				6CDABA661A3A0A72001E2AB2 /* compact_logs.c in Sources */,
+				6C87B5971A4958D3009C68FF /* timer_service_test.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
