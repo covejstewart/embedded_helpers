@@ -11,10 +11,19 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <assert.h>
 
 #define N_SLOTS 5
 
 void timer_init     (void);
 bool timer_add_callback_and_interval(void (*func)(void), uint32_t);
+
+/*------------------
+ *  
+ *  Test Interface
+ *
+ *------------------*/
+
+void timer_increment_time(void);
 
 #endif /* defined(__embedded_helpers__timer_service__) */
