@@ -9,12 +9,13 @@
 #ifndef embedded_helpers_test_h
 #define embedded_helpers_test_h
 
-#define ASSERT(X) \
-do { \
-if(false == (X)) { \
-m_failures++; \
-printf("Test Failure in %s at %d\n",__func__,__LINE__); \
-}\
+#define ASSERT(X)                                               \
+do {                                                            \
+    if(false == (X))                                            \
+    {                                                           \
+        m_failures++;                                           \
+        printf("Test Failure in %s at %d\n",__func__,__LINE__); \
+    }                                                           \
 } while(0)
 
 
