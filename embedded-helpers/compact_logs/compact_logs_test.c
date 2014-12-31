@@ -107,7 +107,7 @@ uint32_t compact_logs_test(void) {
     
     m_failures = 0;
     
-    printf("Running - %s\n", __func__);
+    ECHOTESTSUITE();
     
     test_free_space_after_write();
     test_fill_queue_and_overflow();

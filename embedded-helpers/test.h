@@ -18,6 +18,10 @@ do {                                                            \
     }                                                           \
 } while(0)
 
+#define ECHOTESTSUITE()                     \
+do {                                        \
+    printf("Running - %s\n", __func__);     \
+} while(0)                                  \
 
 
 #endif

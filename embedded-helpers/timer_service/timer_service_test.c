@@ -69,7 +69,7 @@ uint32_t timer_service_test(void) {
     
     m_failures = 0;
     
-    printf("Running - %s\n", __func__);
+    ECHOTESTSUITE();
 
     test_adding_null();
     test_add_callbacks();
