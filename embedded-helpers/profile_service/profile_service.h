@@ -10,6 +10,7 @@
 #define __embedded_helpers__profile_service__
 
 #include <stdio.h>
+#include <assert.h>
 
 void profile_init(void);
 

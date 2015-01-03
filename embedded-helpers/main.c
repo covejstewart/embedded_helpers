@@ -13,6 +13,7 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
+    
     compact_logs_test();
     timer_service_test();
     profile_service_test();

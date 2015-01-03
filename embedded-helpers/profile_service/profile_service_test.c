@@ -15,6 +15,7 @@ uint32_t profile_service_test(void)
     ECHOTESTSUITE();
     
     m_failures = 0;
+
     
 
     return m_failures;

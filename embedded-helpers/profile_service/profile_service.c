@@ -8,6 +8,11 @@
 
 #include "profile_service.h"
 
+#ifdef TESTBENCH
+#else
+#error "No Include - Add Target HW Include"
+#endif
+
 
 void profile_init(void)
 {
