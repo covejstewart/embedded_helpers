@@ -13,16 +13,28 @@
 #include <assert.h>
 #include <stdbool.h>
 
-void profile_init(void);
-void profile_start(void);
-void profile_stop(void);
+#define N_PROFILES 10
 
+#define PROFILEPUSH()               \
+do {                                \
+    profile_push(__COUNTER__);      \
+} while(0)                          \
+
+#define PROFILEPOP()                \
+do {                                \
+    profile_pop();                  \
+} while(0)                          \
+
+
+void profile_init (void);
+int  profile_push ( int);
+int  profile_pop  (void);
 
 /*************************
 *
 *   Test Interface
 *
 **************************/
-void profile_test_set_ticks(uint32_t);
+uint32_t profile_test_get_active_id(void);
 
 #endif /* defined(__embedded_helpers__profile_service__) */

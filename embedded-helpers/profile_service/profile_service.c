@@ -8,21 +8,16 @@
 
 #include "profile_service.h"
 
-#ifdef TESTBENCH
 
-static uint32_t m_ticks;
+static int m_error = -1;
 
-#else
-#error "No Include - Add Target HW Include"
-#endif
-
-#define N_PROFILES 10
+static uint8_t m_index;
+static int m_active_id;
 
 typedef struct {
-    uint32_t start;
-    uint32_t stop;
+    int id;
     bool     is_active;
-}m_profile_t;
+} m_profile_t;
 
 static void clear_profile(m_profile_t *);
 
@@ -30,6 +25,9 @@ static m_profile_t profiles[N_PROFILES];
 
 void profile_init(void)
 {
+    m_active_id = m_error;
+    m_index     = 0;
+    
     for (int x = 0; x < N_PROFILES; x++)
     {
         clear_profile(&profiles[x]);
@@ -37,23 +35,51 @@ void profile_init(void)
     
 }
 
-void profile_start(void)
+int profile_push(int id)
 {
+    if (N_PROFILES == m_index)
+    {
+        return m_error;
+    }
+    
+    if (0 > id)
+    {
+        return m_error;
+    }
+    
+    
+    profiles[m_index].id = id;
+    m_index++;
+    
+    m_active_id = id;
+
+    return m_active_id;
     
 }
 
-void profile_stop(void)
+int profile_pop(void)
 {
+ 
+    if(0 == m_index)
+    {
+        return m_error;
+    }
+    
+    m_index--;
+    
+    m_active_id = profiles[m_index].id;
+    
+    return m_active_id;
     
 }
 
 static void clear_profile(m_profile_t *profile)
 {
-    assert(NULL == profile);
+    assert(NULL != profile);
     
     profile->is_active = false;
-    profile->start     = 0;
-    profile->stop      = 0;
+    profile->id = m_error;
+
 }
 
 /*************************
@@ -61,9 +87,9 @@ static void clear_profile(m_profile_t *profile)
  *   Test Interface
  *
  **************************/
-void profile_test_set_ticks(uint32_t tick) {
-#ifdef TESTBENCH
-    m_ticks = tick;
-#endif
+uint32_t profile_test_get_active_id(void) {
+    //the index is incremented immediately
+    return m_active_id;
+    
 }
 
