@@ -15,17 +15,6 @@
 
 #define N_PROFILES 10
 
-#define PROFILEPUSH()               \
-do {                                \
-    profile_push(__COUNTER__);      \
-} while(0)                          \
-
-#define PROFILEPOP()                \
-do {                                \
-    profile_pop();                  \
-} while(0)                          \
-
-
 void profile_init (void);
 int  profile_push ( int);
 int  profile_pop  (void);
