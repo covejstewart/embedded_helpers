@@ -47,6 +47,16 @@ static void test_active_id(void)
     }
 }
 
+static void test_push_pop_cycles(void)
+{
+    profile_init();
+    
+    for (int x = 0; x < 100; x++) {
+        profile_push(x);
+        ASSERT(x == profile_pop());
+    }
+}
+
 uint32_t profile_service_test(void)
 {
     ECHOTESTSUITE();
@@ -56,6 +66,7 @@ uint32_t profile_service_test(void)
     test_push_pop();
     test_max_profiles();
     test_active_id();
+    test_push_pop_cycles();
 
     return m_failures;
 }

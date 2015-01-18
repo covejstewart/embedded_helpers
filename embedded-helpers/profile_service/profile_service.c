@@ -23,6 +23,7 @@ static void clear_profile(m_profile_t *);
 
 static m_profile_t profiles[N_PROFILES];
 
+
 void profile_init(void)
 {
     m_active_id = m_error;
