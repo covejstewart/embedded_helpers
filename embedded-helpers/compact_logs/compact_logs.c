@@ -97,7 +97,8 @@ void log_clear(void)
 }
 
 
-static uint32_t serialize_log(log_t *log, uint8_t *buffer, uint32_t size) {
+static uint32_t serialize_log(log_t *log, uint8_t *buffer, uint32_t size)
+{
     
     assert(sizeof(log_t) <= size);
     
