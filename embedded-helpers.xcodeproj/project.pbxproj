@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C0718B91A8BFD5A001A5474 /* serial_number.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C0718B51A8BFD5A001A5474 /* serial_number.c */; };
+		6C0718BA1A8BFD5A001A5474 /* serial_number_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C0718B71A8BFD5A001A5474 /* serial_number_test.c */; };
+		6C0718BD1A8C002B001A5474 /* hal_eeprom.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C0718BB1A8C002B001A5474 /* hal_eeprom.c */; };
 		6C43693C1A3F53C2004E477A /* compact_logs_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C43693A1A3F53C2004E477A /* compact_logs_test.c */; };
 		6C7DCDAC1A544ADF0047D05D /* profile_service.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C7DCDAA1A544ADF0047D05D /* profile_service.c */; };
 		6C7DCDB01A544B830047D05D /* profile_service_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C7DCDAE1A544B830047D05D /* profile_service_test.c */; };
@@ -29,6 +32,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6C0718B51A8BFD5A001A5474 /* serial_number.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = serial_number.c; sourceTree = "<group>"; };
+		6C0718B61A8BFD5A001A5474 /* serial_number.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serial_number.h; sourceTree = "<group>"; };
+		6C0718B71A8BFD5A001A5474 /* serial_number_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = serial_number_test.c; sourceTree = "<group>"; };
+		6C0718B81A8BFD5A001A5474 /* serial_number_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serial_number_test.h; sourceTree = "<group>"; };
+		6C0718BB1A8C002B001A5474 /* hal_eeprom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hal_eeprom.c; sourceTree = "<group>"; };
+		6C0718BC1A8C002B001A5474 /* hal_eeprom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hal_eeprom.h; sourceTree = "<group>"; };
 		6C43693A1A3F53C2004E477A /* compact_logs_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compact_logs_test.c; path = compact_logs/compact_logs_test.c; sourceTree = "<group>"; };
 		6C43693B1A3F53C2004E477A /* compact_logs_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compact_logs_test.h; path = compact_logs/compact_logs_test.h; sourceTree = "<group>"; };
 		6C7DCDAA1A544ADF0047D05D /* profile_service.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = profile_service.c; path = profile_service/profile_service.c; sourceTree = "<group>"; };
@@ -57,6 +66,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0718B41A8BFD5A001A5474 /* serial_number */ = {
+			isa = PBXGroup;
+			children = (
+				6C0718B51A8BFD5A001A5474 /* serial_number.c */,
+				6C0718B61A8BFD5A001A5474 /* serial_number.h */,
+				6C0718B71A8BFD5A001A5474 /* serial_number_test.c */,
+				6C0718B81A8BFD5A001A5474 /* serial_number_test.h */,
+				6C0718BB1A8C002B001A5474 /* hal_eeprom.c */,
+				6C0718BC1A8C002B001A5474 /* hal_eeprom.h */,
+			);
+			path = serial_number;
+			sourceTree = "<group>";
+		};
 		6C7DCDAD1A544AE40047D05D /* profile_service */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +131,7 @@
 		6CDABA561A380C34001E2AB2 /* embedded-helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6C0718B41A8BFD5A001A5474 /* serial_number */,
 				6C87B5911A49583B009C68FF /* timer_service */,
 				6C9564081A464695008E9FB6 /* compact_logs */,
 				6CDABA571A380C34001E2AB2 /* main.c */,
@@ -174,12 +197,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0718B91A8BFD5A001A5474 /* serial_number.c in Sources */,
+				6C0718BD1A8C002B001A5474 /* hal_eeprom.c in Sources */,
 				6CDABA581A380C34001E2AB2 /* main.c in Sources */,
 				6C87B5941A495865009C68FF /* timer_service.c in Sources */,
 				6C43693C1A3F53C2004E477A /* compact_logs_test.c in Sources */,
 				6C7DCDAC1A544ADF0047D05D /* profile_service.c in Sources */,
 				6CDABA661A3A0A72001E2AB2 /* compact_logs.c in Sources */,
 				6C7DCDB01A544B830047D05D /* profile_service_test.c in Sources */,
+				6C0718BA1A8BFD5A001A5474 /* serial_number_test.c in Sources */,
 				6C87B5971A4958D3009C68FF /* timer_service_test.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

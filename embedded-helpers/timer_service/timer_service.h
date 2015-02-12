@@ -9,7 +9,6 @@
 #ifndef __embedded_helpers__timer_service__
 #define __embedded_helpers__timer_service__
 
-#include <stdio.h>
 #include <stdbool.h>
 #include <assert.h>
 

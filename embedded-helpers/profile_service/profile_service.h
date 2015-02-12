@@ -9,7 +9,6 @@
 #ifndef __embedded_helpers__profile_service__
 #define __embedded_helpers__profile_service__
 
-#include <stdio.h>
 #include <assert.h>
 #include <stdbool.h>
 

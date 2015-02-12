@@ -9,7 +9,6 @@
 #ifndef __embedded_helpers__compact_logs__
 #define __embedded_helpers__compact_logs__
 
-#include <stdio.h>
 #include <stdbool.h>
 #include <assert.h>
 
