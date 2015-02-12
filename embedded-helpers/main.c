@@ -10,12 +10,13 @@
 #include "compact_logs_test.h"
 #include "timer_service_test.h"
 #include "profile_service_test.h"
+#include "serial_number_test.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    
+    serial_number_test();
     
     compact_logs_test();
     timer_service_test();
     profile_service_test();
-    
 }
