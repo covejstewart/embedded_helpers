@@ -12,7 +12,9 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+#define SERIAL_NUM_SZ 16
 
+bool sn_read_serial_number(uint8_t *, uint32_t);
 
 
 #endif /* defined(__embedded_helpers__serial_number__) */

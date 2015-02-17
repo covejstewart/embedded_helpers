@@ -15,4 +15,5 @@
 uint32_t serial_number_test(void);
 
 
+
 #endif /* defined(__embedded_helpers__serial_number_test__) */

@@ -8,3 +8,7 @@
 
 #include "serial_number.h"
 
+bool sn_read_serial_number(uint8_t *buffer, uint32_t length)
+{
+    return false;
+}
