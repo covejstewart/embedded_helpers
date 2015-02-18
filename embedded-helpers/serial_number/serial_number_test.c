@@ -13,7 +13,9 @@ static uint32_t m_failures;
 
 static void test_read_serial_number(void)
 {
+    uint8_t buffer[SERIAL_NUM_SZ];
     
+    ASSERT(true == get_serial_number(buffer, sizeof(buffer)));
 }
 
 uint32_t serial_number_test(void)

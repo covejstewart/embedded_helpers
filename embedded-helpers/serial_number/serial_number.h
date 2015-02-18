@@ -11,10 +11,11 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+#include <assert.h>
 
 #define SERIAL_NUM_SZ 16
 
-bool read_serial_number(uint8_t *, uint32_t);
-
+bool  get_serial_number(uint8_t *, uint32_t);
+bool  set_serial_number(uint8_t *, uint32_t);
 
 #endif /* defined(__embedded_helpers__serial_number__) */

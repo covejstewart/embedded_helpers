@@ -7,8 +7,23 @@
 //
 
 #include "serial_number.h"
+#include "hal_eeprom.h"
 
-bool read_serial_number(uint8_t *buffer, uint32_t length)
+#define SERIAL_NUMBER_EEPROM_ADDRESS 0
+
+
+bool get_serial_number(uint8_t *buffer, uint32_t length)
 {
-    return false;
+    assert(SERIAL_NUM_SZ == length);
+    assert(NULL != buffer);
+    
+    return eeprom_read(SERIAL_NUMBER_EEPROM_ADDRESS, buffer, length);
+}
+
+bool set_serial_number(uint8_t *buffer, uint32_t length)
+{
+    assert(SERIAL_NUM_SZ == length);
+    assert(NULL != buffer);
+    
+    return eeprom_write(SERIAL_NUMBER_EEPROM_ADDRESS, buffer, length);
 }
